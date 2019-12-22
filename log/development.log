@@ -1,0 +1,69 @@
+Started GET "/" for ::1 at 2019-12-22 18:52:05 +0100
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/henderson/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CocktailsController#home as HTML
+  Rendering cocktails/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.2ms)
+  Rendered shared/_navbar.html.erb (13806.6ms)
+  Rendered cocktails/home.html.erb within layouts/application (13810.9ms)
+[Webpacker] Compiling…
+[Webpacker] Compiled all packs in /home/henderson/code/Hendersonpinto/hendersons-bar/public/packs
+Completed 200 OK in 21490ms (Views: 21481.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-22 18:54:00 +0100
+Processing by CocktailsController#home as HTML
+  Rendering cocktails/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.5ms)
+  Rendered shared/_navbar.html.erb (4.2ms)
+  Rendered cocktails/home.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 75ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-22 18:54:01 +0100
+Processing by CocktailsController#home as HTML
+  Rendering cocktails/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.8ms)
+  Rendered shared/_navbar.html.erb (5.6ms)
+  Rendered cocktails/home.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 86ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-22 18:54:04 +0100
+Processing by CocktailsController#home as HTML
+  Rendering cocktails/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.5ms)
+  Rendered shared/_navbar.html.erb (4.1ms)
+  Rendered cocktails/home.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-22 18:54:09 +0100
+Processing by CocktailsController#home as HTML
+  Rendering cocktails/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (5.0ms)
+  Rendered cocktails/home.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 80ms (Views: 77.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cocktails" for ::1 at 2019-12-22 18:54:11 +0100
+Processing by CocktailsController#index as HTML
+  Rendering cocktails/index.html.erb within layouts/application
+  [1m[36mCocktail Load (98.7ms)[0m  [1m[34mSELECT "cocktails".* FROM "cocktails"[0m
+  ↳ app/views/cocktails/index.html.erb:6
+  Rendered cocktails/index.html.erb within layouts/application (215.5ms)
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 147.8ms)
+
+
+  
+ActionView::Template::Error (Must supply cloud_name in tag or in configuration):
+    10: 
+    11:   <% end %>
+    12: 
+    13:   <%= cl_image_tag("gnkundqxkfgr4vix9jfc",
+    14:       width: 400, height: 300, crop: :fill) %>
+    15: 
+    16:   <%= cl_image_tag("s1zqgyg3ix6upq8a2keh",
+  
+app/views/cocktails/index.html.erb:13:in `_app_views_cocktails_index_html_erb__388849467975812079_70005118483320'
