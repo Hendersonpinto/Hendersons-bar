@@ -1,0 +1,41 @@
+// Specific CSS for your home-page
+.banner2 h2 {
+font-family: playfair display;
+font-size: 84px;
+}
+
+.banner2 {
+  padding: 100px;
+  text-align: center
+}
+
+.banner3{
+  justify-content:space-between;
+align-content: center;
+}
+.left{
+flex-grow:1;
+background-color: #D69869;
+// margin: auto;
+// vertical-align: middle;
+// text-align:center;
+// justify-content:center;
+align-content:center;
+}
+
+.left_title {
+font-family: playfair display;
+font-size: 50px;
+// flex-grow:1;
+// text-align:center;
+
+}
+
+.miximg{
+  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), asset-url('banner.jpg');
+}
+
+.drink_image{
+  width:800px;
+  height: 400px;
+}
