@@ -1,16 +1,36 @@
 <%= render '/shared/banner' %>
 <%= render '/shared/navbar' %>
-<div class="banner2 container">
-  <h2> Make you feel at home & get you drunk is our passion</h2>
+<div class="message-section container">
+  <h2> Make you feel at home & get you drunk is my passion</h2>
+  <%= link_to 'Explore my recipes', cocktails_path, class: "btn_gold"%>
 </div>
 
 
-<div class="banner3 d-flex">
-  <div class="left d-flex">
-    MIXOLOGY
+<div class="info-section">
+  <div class="left">
+    <p>MIXOLOGY</p>
   </div>
 
-  <div class="miximg">
-    <%= image_tag ("banner.jpg"), class: "drink_image", alt: "alttext" %>
+  <div class="right">
+  </div>
+</div>
+
+
+<div class="subscription-section">
+  <%= video_tag "bar.mp4", autoplay: true, loop: true, id: "myVideo", controls: true, muted: true %>
+  <div class="quote">
+    <h2>"A drink! Because no great story ever began with a salad..."</h2>
+    <div class="sepatator"></div>
+    <p>Abraham Lincoln</p>
+    <p>(ok maybe wasn't him)</p>
+  </div>
+
+  <div>
+    <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
+    <%= simple_form_for @email do |f| %>
+      <%= f.input :name, label: 'Your full name', error: 'Name is mandatory, please specify one' %>
+      <%= f.input :email, placeholder: 'user@domain.com' %>
+      <%= f.button :submit %>
+    <% end %>
   </div>
 </div>

@@ -1,41 +1,92 @@
 // Specific CSS for your home-page
-.banner2 h2 {
-font-family: playfair display;
-font-size: 84px;
+.message-section {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-height: 50vh;
+  // padding: 100px;
+  text-align: center;
+  justify-content:center;
+  font-family: $para-font;
+
+  h2 {
+    font-family: playfair display;
+    // font-size: 84px;
+    font-size: 5vh;
+  }
 }
 
-.banner2 {
-  padding: 100px;
-  text-align: center
+.info-section{
+  display:flex;
+  .left{
+    width:50%;
+    flex-grow:1;
+    background-color: $my-gold;
+    // margin: auto;
+    // vertical-align: middle;
+    // text-align:center;
+    // justify-content:center;
+    align-content:center;
+  }
+
+  .right {
+    width:50%;
+    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), asset-url('banner.jpg');
+    background-size: cover;
+    background-position: center;
+  }
 }
 
-.banner3{
-  justify-content:space-between;
-align-content: center;
-}
-.left{
-flex-grow:1;
-background-color: #D69869;
-// margin: auto;
-// vertical-align: middle;
-// text-align:center;
-// justify-content:center;
-align-content:center;
+
+.subscription-section {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  min-height: 10vh;
+  text-align: center;
+  justify-content:center;
+  font-family: $para-font;
+
+  h2 {
+    margin-top:80px;
+    font-family: playfair display;
+    // font-size: 84px;
+    font-size: 5vh;
+  }
+
+  .sepatator {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: $my-gold;
+    width:100px;
+    height: 10px;
+  }
+
+  p{
+    font-family: $para-font;
+    font-size:24px;
+  }
+
+  .quote {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    color:white;
+  }
 }
 
-.left_title {
-font-family: playfair display;
-font-size: 50px;
-// flex-grow:1;
-// text-align:center;
+
+
+
+#myVideo {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 
 }
 
-.miximg{
-  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), asset-url('banner.jpg');
-}
-
-.drink_image{
-  width:800px;
-  height: 400px;
-}
