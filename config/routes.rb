@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # get "cocktails/home", to: "cocktails#home"
   root to: 'pages#home'
 
+  get "users", to: "users#index"
+  resources :users, only: [:index, :show, :new, :create, :destroy, :update]
   resources :cocktails, only: [:index, :show, :new, :create, :destroy, :update] do
     resources :doses, only: [:new, :create]
   end

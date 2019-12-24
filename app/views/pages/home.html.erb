@@ -23,14 +23,13 @@
     <div class="sepatator"></div>
     <p>Abraham Lincoln</p>
     <p>(ok maybe wasn't him)</p>
-  </div>
-
-  <div>
-    <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
-    <%= simple_form_for @email do |f| %>
-      <%= f.input :name, label: 'Your full name', error: 'Name is mandatory, please specify one' %>
-      <%= f.input :email, placeholder: 'user@domain.com' %>
-      <%= f.button :submit %>
-    <% end %>
+    <div class="form-wrapper">
+      <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
+      <%= simple_form_for @user do |f| %>
+        <%= f.input :name, label: 'Your full name', error: 'Name is mandatory, please specify one' %>
+        <%= f.input :email, placeholder: 'user@domain.com' %>
+        <%= f.button :submit, 'Sign up to newsletter', class: 'btn_gold large' %>
+      <% end %>
+    </div>
   </div>
 </div>
