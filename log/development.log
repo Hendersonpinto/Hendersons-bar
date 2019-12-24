@@ -3340,3 +3340,711 @@ Started PUT "/__web_console/repl_sessions/7546fe7424dc6407cfe4628f54ba3f03" for 
 Started PUT "/__web_console/repl_sessions/7546fe7424dc6407cfe4628f54ba3f03" for ::1 at 2019-12-24 00:31:00 +0100
 Started PUT "/__web_console/repl_sessions/7546fe7424dc6407cfe4628f54ba3f03" for ::1 at 2019-12-24 00:31:01 +0100
 Started PUT "/__web_console/repl_sessions/7546fe7424dc6407cfe4628f54ba3f03" for ::1 at 2019-12-24 00:31:02 +0100
+Started GET "/" for ::1 at 2019-12-24 01:03:51 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/henderson/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(672984542578094145)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20191223235920)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (423.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20191223235920_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191223235920"]]
+  ↳ bin/rails:9
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (59.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(672984542578094145)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2019-12-24 01:04:12 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/henderson/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered pages/home.html.erb within layouts/application (270.1ms)
+Completed 500 Internal Server Error in 290ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<#<Class:0x00007f5c25817c10>:0x00007f5c258162c0>):
+    27: 
+    28:   <div>
+    29:     <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
+    30:     <%= simple_form_for @user do |f| %>
+    31:       <%= f.input :name, label: 'Your full name', error: 'Name is mandatory, please specify one' %>
+    32:       <%= f.input :email, placeholder: 'user@domain.com' %>
+    33:       <%= f.button :submit %>
+  
+app/views/pages/home.html.erb:30:in `_app_views_pages_home_html_erb___4388014505300297922_70016871481820'
+Started GET "/" for ::1 at 2019-12-24 01:13:40 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.2ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 219ms (Views: 204.3ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:17:43 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered pages/home.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 5519ms (Views: 5517.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:18:44 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered pages/home.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 5331ms (Views: 5330.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:20:44 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.8ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered pages/home.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 5412ms (Views: 5410.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:21:28 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered pages/home.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 5348ms (Views: 5346.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:22:29 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered pages/home.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 5602ms (Views: 5600.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:22:42 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.5ms)
+  Rendered shared/_navbar.html.erb (3.3ms)
+  Rendered pages/home.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 77ms (Views: 76.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:22:49 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered pages/home.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 5346ms (Views: 5344.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:23:48 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (3.1ms)
+  Rendered pages/home.html.erb within layouts/application (92.3ms)
+Completed 200 OK in 165ms (Views: 163.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:24:13 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 5967ms (Views: 5966.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:24:51 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (3.8ms)
+  Rendered pages/home.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 5354ms (Views: 5352.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:25:15 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 5466ms (Views: 5464.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:25:51 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.0ms)
+  Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 5194ms (Views: 5192.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:27:46 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (3.7ms)
+  Rendered pages/home.html.erb within layouts/application (123.4ms)
+Completed 200 OK in 5562ms (Views: 5560.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-12-24 01:28:28 +0100
+  
+AbstractController::ActionNotFound (The action 'create' could not be found for UsersController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+webpacker (4.0.7) lib/webpacker/dev_server_proxy.rb:29:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2019-12-24 01:29:34 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KuIuwE1GzSJ0QgOoAfPGCAYkncOo4gRCYNWSTQOUi4n1vI7EhB3r8tqg6UkOOEfJGKZsAyls9bURe6Cs+asJwA==", "user"=>{"name"=>"Henderson", "email"=>"hender@123.com"}, "commit"=>"Create User"}
+Unpermitted parameter: :email
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 422 Unprocessable Entity in 17ms (ActiveRecord: 5.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Email can't be blank):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/users" for ::1 at 2019-12-24 01:29:42 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KuIuwE1GzSJ0QgOoAfPGCAYkncOo4gRCYNWSTQOUi4n1vI7EhB3r8tqg6UkOOEfJGKZsAyls9bURe6Cs+asJwA==", "user"=>{"name"=>"Henderson", "email"=>"hender@123.com"}, "commit"=>"Create User"}
+Unpermitted parameter: :email
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Email can't be blank):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started POST "/users" for ::1 at 2019-12-24 01:30:00 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KuIuwE1GzSJ0QgOoAfPGCAYkncOo4gRCYNWSTQOUi4n1vI7EhB3r8tqg6UkOOEfJGKZsAyls9bURe6Cs+asJwA==", "user"=>{"name"=>"Henderson", "email"=>"sadasd@gmail.com"}, "commit"=>"Create User"}
+Unpermitted parameter: :email
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Email can't be blank):
+  
+app/controllers/users_controller.rb:8:in `create'
+Started GET "/" for ::1 at 2019-12-24 01:30:36 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.2ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered pages/home.html.erb within layouts/application (8.1ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    25:     <p>(ok maybe wasn't him)</p>
+    26:     <div class="form-wrapper">
+    27:       <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
+    28:       <%= simple_form_for @user do |f| %>
+    29:         <%= f.input :name, label: 'Your full name', error: 'Name is mandatory, please specify one' %>
+    30:         <%= f.input :email, placeholder: 'user@domain.com' %>
+    31:         <%= f.button :submit %>
+  
+app/views/pages/home.html.erb:28:in `_app_views_pages_home_html_erb___4388014505300297922_70016871375080'
+Started GET "/" for ::1 at 2019-12-24 01:30:59 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered pages/home.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    25:     <p>(ok maybe wasn't him)</p>
+    26:     <div class="form-wrapper">
+    27:       <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
+    28:       <%= simple_form_for @user do |f| %>
+    29:         <%= f.input :name, label: 'Your full name', error: 'Name is mandatory, please specify one' %>
+    30:         <%= f.input :email, placeholder: 'user@domain.com' %>
+    31:         <%= f.button :submit %>
+  
+app/views/pages/home.html.erb:28:in `_app_views_pages_home_html_erb___4388014505300297922_70016878026700'
+Started GET "/" for ::1 at 2019-12-24 01:31:30 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (3.0ms)
+  Rendered pages/home.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `model_name' for nil:NilClass):
+    25:     <p>(ok maybe wasn't him)</p>
+    26:     <div class="form-wrapper">
+    27:       <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
+    28:       <%= simple_form_for @user do |f| %>
+    29:         <%= f.input :name, label: 'Your full name', error: 'Name is mandatory, please specify one' %>
+    30:         <%= f.input :email, placeholder: 'user@domain.com' %>
+    31:         <%= f.button :submit %>
+  
+app/views/pages/home.html.erb:28:in `_app_views_pages_home_html_erb___4388014505300297922_70017034100060'
+Started GET "/" for ::1 at 2019-12-24 01:31:53 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.2ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered pages/home.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 65ms (Views: 51.1ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:32:17 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.2ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered pages/home.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 61ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:32:52 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered pages/home.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 133ms (Views: 125.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-12-24 01:33:02 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a1B5UTMEMbWR1zauriae3hapo8w9wSBvLYQl/KGQ/3i0DtlV+l8XZT813E+h7R8fCCtSDLxP0ZhcKhcdW699MQ==", "user"=>{"name"=>"adsadad", "email"=>"asdad@gmasc.com"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "adsadad"], ["email", "asdad@gmasc.com"], ["created_at", "2019-12-24 00:33:02.764964"], ["updated_at", "2019-12-24 00:33:02.764964"]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (377.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:8
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 401ms (ActiveRecord: 379.9ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:33:56 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered pages/home.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 73ms (Views: 71.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-12-24 01:34:03 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MJf+SrnjaaqwilpiqL7gY9zpPou8fOjYm59iKxei2BPvyV5OcLhPeh5osIOndWGiwmvPSz3yGS/qMVDK7Z1aWg==", "user"=>{"name"=>"sad", "email"=>"sss"}, "commit"=>"Create User"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:8
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "sad"], ["email", "sss"], ["created_at", "2019-12-24 00:34:03.377715"], ["updated_at", "2019-12-24 00:34:03.377715"]]
+  ↳ app/controllers/users_controller.rb:8
+  [1m[35m (214.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:8
+No template found for UsersController#create, rendering head :no_content
+Completed 204 No Content in 236ms (ActiveRecord: 215.3ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:36:24 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered pages/home.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 85ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:37:23 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered pages/home.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:38:15 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/henderson/code/Hendersonpinto/hendersons-bar/app/views/pages/home.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+...buffer.append=( f.button ''save' :submit, class: 'btn_gold' ...
+...                           ^~~~
+/home/henderson/code/Hendersonpinto/hendersons-bar/app/views/pages/home.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+...save' :submit, class: 'btn_gold' );@output_buffer.safe_appen...
+...                       ^~~~~~~~
+/home/henderson/code/Hendersonpinto/hendersons-bar/app/views/pages/home.html.erb:34: unknown regexp options - dv
+/home/henderson/code/Hendersonpinto/hendersons-bar/app/views/pages/home.html.erb:35: syntax error, unexpected '<'
+</div>
+^
+/home/henderson/code/Hendersonpinto/hendersons-bar/app/views/pages/home.html.erb:40: unterminated regexp meets end of file
+          end
+              ^
+/home/henderson/code/Hendersonpinto/hendersons-bar/app/views/pages/home.html.erb:40: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/pages/home.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pages/home.html.erb:31: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/pages/home.html.erb:34: unknown regexp options - dv
+app/views/pages/home.html.erb:35: syntax error, unexpected '<'
+app/views/pages/home.html.erb:40: unterminated regexp meets end of file
+app/views/pages/home.html.erb:40: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/" for ::1 at 2019-12-24 01:38:25 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/henderson/code/Hendersonpinto/hendersons-bar/app/views/pages/home.html.erb:31: syntax error, unexpected ':', expecting ')'
+...ffer.append=( f.button 'save' :submit, class: 'btn_gold' );@...
+...                              ^):
+  
+app/views/pages/home.html.erb:31: syntax error, unexpected ':', expecting ')'
+Started GET "/" for ::1 at 2019-12-24 01:38:42 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered pages/home.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 64ms (Views: 62.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:39:44 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered pages/home.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:40:02 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.5ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered pages/home.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 69ms (Views: 67.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:41:07 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.5ms)
+  Rendered shared/_navbar.html.erb (2.7ms)
+  Rendered pages/home.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 5481ms (Views: 5479.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:41:43 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+  Rendered pages/home.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 5287ms (Views: 5285.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:42:14 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (2.3ms)
+  Rendered pages/home.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 5379ms (Views: 5377.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:42:31 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (4.1ms)
+  Rendered pages/home.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 5428ms (Views: 5426.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:45:13 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (3.3ms)
+  Rendered pages/home.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 5431ms (Views: 5429.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:46:20 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered pages/home.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 5267ms (Views: 5266.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:47:28 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.9ms)
+  Rendered pages/home.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 5363ms (Views: 5361.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:49:19 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered pages/home.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 5349ms (Views: 5347.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:50:13 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered pages/home.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 5638ms (Views: 5637.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:51:25 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered pages/home.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 5449ms (Views: 5446.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:52:58 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.6ms)
+  Rendered shared/_navbar.html.erb (3.0ms)
+  Rendered pages/home.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 5448ms (Views: 5446.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:53:49 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.5ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered pages/home.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 72ms (Views: 70.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:54:51 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.5ms)
+  Rendered shared/_navbar.html.erb (3.8ms)
+  Rendered pages/home.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 5432ms (Views: 5431.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:55:45 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (1.5ms)
+  Rendered pages/home.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 4601ms (Views: 4599.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:56:19 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.5ms)
+  Rendered shared/_navbar.html.erb (3.2ms)
+  Rendered pages/home.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 5554ms (Views: 5551.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:56:54 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.2ms)
+  Rendered shared/_navbar.html.erb (1.8ms)
+  Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 5352ms (Views: 5351.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:57:31 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered pages/home.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 55ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:57:52 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (1.9ms)
+  Rendered pages/home.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 65ms (Views: 63.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 01:59:33 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.7ms)
+  Rendered shared/_navbar.html.erb (2.1ms)
+  Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 4662ms (Views: 4660.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-12-24 02:00:23 +0100
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.4ms)
+  Rendered shared/_navbar.html.erb (2.8ms)
+  Rendered pages/home.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 4558ms (Views: 4556.9ms | ActiveRecord: 0.0ms)
+
+
