@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get "users", to: "users#index"
+  get "javascript", to: "pages#javascript", as: :javascript
   resources :users, only: [:index, :show, :new, :create, :destroy, :update]
   resources :cocktails, only: [:index, :show, :new, :create, :destroy, :update] do
     resources :doses, only: [:new, :create]

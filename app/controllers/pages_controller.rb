@@ -4,4 +4,8 @@ class PagesController < ApplicationController
     # render :layout => 'home'
     @user = User.new
   end
+
+  def javascript
+
+  end
 end

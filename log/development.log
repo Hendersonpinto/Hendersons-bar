@@ -4048,3 +4048,25 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 4558ms (Views: 4556.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-12-24 02:17:42 +0100
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/henderson/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.3ms)
+  Rendered shared/_navbar.html.erb (2076.6ms)
+  Rendered pages/home.html.erb within layouts/application (2118.8ms)
+Completed 200 OK in 2203ms (Views: 2175.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2019-12-25 13:15:47 +0100
+  [1m[35m (28.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/henderson/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered shared/_banner.html.erb (0.2ms)
+  Rendered shared/_navbar.html.erb (983.7ms)
+  Rendered pages/home.html.erb within layouts/application (1155.6ms)
+Completed 200 OK in 1592ms (Views: 1466.8ms | ActiveRecord: 63.8ms)
+
+
