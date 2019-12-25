@@ -1,5 +1,7 @@
 // Specific CSS for your home-page
 .message-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -11,33 +13,43 @@
 
   h2 {
     font-family: playfair display;
-    // font-size: 84px;
-    font-size: 5vh;
+    font-size: 65px;
+    // font-size: 5vh;
   }
 }
 
-.info-section{
-  display:flex;
-  min-height: 500px;
-  .left{
-    width:50%;
-    flex-grow:1;
-    background-color: $my-gold;
-    // margin: auto;
-    // vertical-align: middle;
-    // text-align:center;
-    // justify-content:center;
-    align-content:center;
-  }
+.info-wrapper{
+  background-color: $my-gold;
 
-  .right {
-    width:50%;
-    background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), asset-url('banner.jpg');
-    background-size: cover;
-    background-position: center;
+  .info-section{
+    margin-top:150px;
+    // margin-bottom:150px;
+    display:flex;
+    min-height: 500px;
+    .half-no-image{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:50%;
+      flex-grow:1;
+      background-color: $my-gold;
+      text-align:center;
+      h3 {
+        font-family: playfair display;
+        font-size: 65px;
+        color: white;
+
+      }
+    }
+
+    .half-with-image {
+      width:50%;
+      background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), asset-url('banner.jpg');
+      background-size: cover;
+      background-position: center;
+    }
   }
 }
-
 
 .subscription-section {
   display:flex;
@@ -77,6 +89,9 @@
     align-items:center;
     position:absolute;
     color:white;
+    &.hidden {
+       display:none;
+      }
 
     .sepatator {
       margin-top: 30px;
@@ -86,21 +101,30 @@
       height: 10px;
     }
 
-    .form-wrapper{
+    #disappearing-form{
       // width:100%;
       margin-top:100px;
       background-color: white;
       color:black;
       padding: 50px;
 
+      &.hidden {
+       display:none;
+      }
+
+
       .btn_gold.large{
         width:100%;
         // padding-left: 40%;
         // padding-right: 40%;
+        &.disabled{
+          pointer-events: none;
+        }
       }
     }
   }
 }
+
 
 
 

@@ -1,17 +1,20 @@
 <%= render '/shared/banner' %>
-<%= render '/shared/navbar' %>
+<%= render '/shared/navbarhome' %>
 <div class="message-section container">
   <h2> Make you feel at home & get you drunk is my passion</h2>
   <%= link_to 'Explore my recipes', cocktails_path, class: "btn_gold"%>
 </div>
 
+<div class="info-wrapper">
+  <div class="info-section">
+    <div class="half-no-image">
+      <h3>Add a creation of your own!</h3>
+    </div>
 
-<div class="info-section">
-  <div class="left">
-    <p>MIXOLOGY</p>
-  </div>
-
-  <div class="right">
+    <div class="half-with-image">
+      <div class="imagediv">
+      </div>
+    </div>
   </div>
 </div>
 
@@ -23,17 +26,13 @@
     <div class="sepatator"></div>
     <p>Abraham Lincoln</p>
     <p>(ok maybe wasn't him)</p>
-    <div class="form-wrapper">
+    <div id="disappearing-form">
       <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
       <%= simple_form_for @user do |f| %>
-        <%= f.input :name, label: 'Your full name', error: 'Name is mandatory, please specify one' %>
-        <%= f.input :email, placeholder: 'user@domain.com' %>
-        <%= f.button :submit, 'Sign up to newsletter', class: 'btn_gold large' %>
+        <%= f.input :name, required: true, label: 'Your full name', placeholder: 'Your Full Name', error: 'Name is mandatory, please specify one' %>
+        <%= f.input :email, required: true, placeholder: 'user@domain.com' %>
+        <%= f.button :submit, 'Sign up to newsletter', class: 'btn_gold large', id: "formbutton" %>
       <% end %>
     </div>
   </div>
-</div>
-
-<div>
-  <%= link_to 'DOM Manipulation', javascript_path, class: "btn_gold"%>
 </div>

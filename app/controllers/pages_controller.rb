@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   end
 
   def javascript
-
+    @user = User.new
   end
 end

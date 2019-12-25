@@ -1,0 +1,17 @@
+<div class="subscription-section">
+  <%= video_tag "bar.mp4", autoplay: true, loop: true, id: "myVideo", controls: true, muted: true %>
+  <div class="quote">
+    <h2>"A drink! Because no great story ever began with a salad..."</h2>
+    <div class="sepatator"></div>
+    <p>Abraham Lincoln</p>
+    <p>(ok maybe wasn't him)</p>
+    <div id="disappearing-form">
+      <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
+      <%= simple_form_for @user do |f| %>
+        <%= f.input :name, required: true, label: 'Your full name', placeholder: 'Your Full Name', error: 'Name is mandatory, please specify one' %>
+        <%= f.input :email, required: true, placeholder: 'user@domain.com' %>
+        <%= f.button :submit, 'Sign up to newsletter', class: 'btn_gold large', id: "formbutton" %>
+      <% end %>
+    </div>
+  </div>
+</div>
