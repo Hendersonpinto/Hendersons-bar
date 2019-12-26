@@ -27,6 +27,7 @@
 
 <div class="backy">
   <div id="disappearing-form">
+      <%= image_tag "logo.jpg", class: "logo-form"%>
       <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
       <%= simple_form_for @user do |f| %>
         <%= f.input :name, required: true, label: 'Your full name', placeholder: 'Your Full Name', error: 'Name is mandatory, please specify one' %>
