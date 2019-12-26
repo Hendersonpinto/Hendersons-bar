@@ -1,16 +1,15 @@
 require_relative 'boot'
-
-require "rails"
+require "rails/all"
 # Pick the frameworks you want:
-require "active_model/railtie"
-require "active_job/railtie"
-require "active_record/railtie"
-require "active_storage/engine"
-require "action_controller/railtie"
-require "action_mailer/railtie"
-require "action_view/railtie"
-require "action_cable/engine"
-require "sprockets/railtie"
+# require "active_model/railtie"
+# require "active_job/railtie"
+# require "active_record/railtie"
+# require "active_storage/engine"
+# require "action_controller/railtie"
+# require "action_mailer/railtie"
+# require "action_view/railtie"
+# require "action_cable/engine"
+# require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -19,6 +18,11 @@ Bundler.require(*Rails.groups)
 
 module RailsMisterCocktail
   class Application < Rails::Application
+    config.generators do |generate|
+          generate.assets false
+          generate.helper false
+          generate.test_framework  :test_unit, fixture: false
+        end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
