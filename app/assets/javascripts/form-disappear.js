@@ -8,7 +8,7 @@ button.addEventListener("click", (event) =>{
   console.log(event);
   console.log(event.currentTarget);
   // element.classList.add("hidden");
-  element.innerHTML = "<p>YOU HAVE SUCCESSFULLY SIGNED UP </p>";
+  element.innerHTML = "<p>YOU HAVE BEEN SUCCESSFULLY SIGNED UP </p>";
 })
 
 
