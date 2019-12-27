@@ -9,19 +9,15 @@
   justify-content:center;
   font-family: $para-font;
 
-  @media only screen and (min-width: 600px) {
-    h2 {
-      font-family: playfair display;
-      font-size: 3.5vw;
-      // DESKTOP VERSION
-    }
-  }
+  h2 {
+    font-family: playfair display;
 
-  @media only screen and (max-width: 599px) {
-    h2 {
-      font-family: playfair display;
+    @media only screen and (max-width: 599px) {
       font-size: 11.5vw;
-      // MOBILE VERSION
+    }
+
+    @media only screen and (min-width: 600px) {
+      font-size: 3.5vw;
     }
   }
 }
@@ -41,23 +37,16 @@
       background-color: $my-gold;
       text-align:center;
 
-      @media only screen and (min-width: 600px) {
-        h3 {
-          font-family: playfair display;
-          font-size: 3vw;
-          // DESKTOP VERSION
-          color: white;
+      h3 {
+        font-family: playfair display;
+        color: white;
 
-        }
-      }
-
-      @media only screen and (max-width: 599px) {
-        h3 {
-          font-family: playfair display;
+        @media only screen and (max-width: 599px) {
           font-size: 4.5vw;
-          // MOBILE VERSION
-          color: white;
+        }
 
+        @media only screen and (min-width: 600px) {
+          font-size: 3vw;
         }
       }
     }
@@ -131,16 +120,16 @@
     font-family: playfair display;
     font-size: 4vw;
   }
-  @media only screen and (min-width: 600px) {
-    p{
-      font-family: $para-font;
-      font-size:1.5vw;
+
+  p{
+    font-family: $para-font;
+
+    @media only screen and (max-width: 599px) {
+        font-size:4.5vw;
     }
-  }
-  @media only screen and (max-width: 599px) {
-    p{
-      font-family: $para-font;
-      font-size:4.5vw;
+
+    @media only screen and (min-width: 600px) {
+        font-size:1.5vw;
     }
   }
 

@@ -2,6 +2,7 @@ class CocktailsController < ApplicationController
 
     def index
       @cocktails = Cocktail.all
+      @popular = Cocktail.where(popular:true).order(:name)
     end
 
     def new
@@ -41,8 +42,10 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.find(params[:id])
     @cocktail.destroy
     redirect_to cocktails_path
+    end
 
-  end
+
+
 
 
     private
