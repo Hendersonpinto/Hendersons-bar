@@ -1,18 +1,35 @@
-<h2>Cocktails list</h2>
+<%= render '/shared/navbar' %>
+<div class="container">
+  <div style="margin-top: 100px; margin-bottom: 100px">
+    <div class="cocktail-card">
+      <h3> COCKTAIL TITLE </h3>
+      <p> This is the description of the cocktail. Give your item a brief description</p>
+      <p id="price">$9</p>
+    </div>
+  </div>
 
-<%= link_to "Create a new cocktail", new_cocktail_path %>
+  <h2 id="lala">Cocktails list</h2>
 
-<div class=cocktails_area>
-  <% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail_path(cocktail) do %>
-    <p id="cocktail_name"> <%= cocktail.name %></p>
-        <% end %>
+  <%= link_to "Create a new cocktail", new_cocktail_path %>
 
-  <% end %>
 
-  <%= cl_image_tag("gnkundqxkfgr4vix9jfc",
-      width: 400, height: 300, crop: :fill) %>
 
-  <%= cl_image_tag("s1zqgyg3ix6upq8a2keh",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
+
+
+
+  <div class=cocktails_area>
+    <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail) do %>
+      <p id="cocktail-name"> <%= cocktail.name %></p>
+          <% end %>
+
+    <% end %>
+
+  </div>
 </div>
+    <%= cl_image_tag("gnkundqxkfgr4vix9jfc",
+        width: 400, height: 300, crop: :fill) %>
+
+    <%= cl_image_tag("s1zqgyg3ix6upq8a2keh",
+        width: 150, height: 150, crop: :thumb, gravity: :face) %>
