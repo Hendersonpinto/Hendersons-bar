@@ -19,6 +19,8 @@ padding-bottom: 30px;
     text-align:center;
     @media only screen and (max-width: 599px) {
       font-size:5vw;
+      padding-left: 10px;
+      padding-right: 10px;
     }
 
     @media only screen and (min-width: 600px) {
@@ -93,6 +95,7 @@ padding-bottom: 30px;
     display:flex;
     justify-content:space-around;
     width:100%;
+    margin-bottom:150px;
   }
 }
 
