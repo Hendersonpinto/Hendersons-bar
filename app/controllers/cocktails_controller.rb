@@ -3,6 +3,7 @@ class CocktailsController < ApplicationController
     def index
       @cocktails = Cocktail.all
       @popular = Cocktail.where(popular:true).order(:name)
+      # @popular = Cocktail.all
     end
 
     def new

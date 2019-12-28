@@ -17,3 +17,17 @@
 
     <%= cl_image_tag("s1zqgyg3ix6upq8a2keh",
         width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
+
+
+
+
+
+
+      <%= link_to "Edit this cocktail", editing_path(@cocktail), class: "btn_gold" %>
+
+
+
+
+
+

@@ -1,12 +1,14 @@
 <%= render '/shared/navbar' %>
-<div class="container">
+<div class="container" style="margin-top: 100px;">
+  <h2 id="title-index">THE MOST POPULAR</h2>
+  <div class="separator2"></div>
   <div class="main-container">
     <% @popular.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do %>
         <div class="cocktail-card">
           <h3> <%= cocktail.name.upcase%></h3>
           <p> <%= cocktail.description %></p>
-          <p id="price">$9</p>
+          <p id="price"><%= cocktail.category %></p>
         </div>
       <% end %>
     <% end %>
