@@ -1,6 +1,16 @@
 <%= render '/shared/navbar' %>
-<div class="container" style="margin-top: 100px;">
-  <h2 id="title-index">THE MOST POPULAR</h2>
+<div class="container" style="margin-top: 75px;">
+  <div class="search-form">
+  <%= form_tag cocktails_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search for a cocktail name or an ingredient"
+    %>
+    <%= submit_tag "Search", class: "btn_gold" %>
+  <% end %>
+  </div>
+  <h2 id="title-index"><%= @title %></h2>
   <div class="separator2"></div>
   <div class="main-container">
     <% @popular.each do |cocktail| %>
@@ -14,28 +24,3 @@
     <% end %>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
