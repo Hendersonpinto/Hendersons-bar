@@ -1,6 +1,17 @@
 @import "home";
 @import "show";
 
+.search-form {
+    margin-bottom:50px;
+  .btn_gold{
+    margin-top:2px;
+  }
+  #query{
+    // width:25%;
+    font-family:$para-font;
+  }
+}
+
 #title-index{
   text-align: center;
   font-family: $para-font;
@@ -17,7 +28,7 @@
 }
 
 .main-container{
-  margin-top:100px;
+  margin-top:65px;
   display:grid;
   grid-gap:16px;
   grid-row-gap:100px;
