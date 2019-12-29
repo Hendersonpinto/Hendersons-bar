@@ -4,25 +4,25 @@
     <!-- Required to measure the screen and use media queries -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Henderson's Bar</title>
     <!-- Including all types of characters -->
     <meta charset="UTF-8">
     <!-- Required for Progressive Web Apps -->
+    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable"  content="yes">
-    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
     <%= render 'shared/ios_pwa_links' %>
-
-    <title>Henderson's Bar</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="//db.onlinewebfonts.com/c/6dd2f2510b4a00a5461b2455928209c2?family=BrandonGrotW01-Light" rel="stylesheet" type="text/css"/>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag "application" %>
   </head>
 
   <body>
     <%= yield %>
     <%= javascript_include_tag "application" %>
+    <%= javascript_pack_tag "application" %>
   </body>
 </html>
