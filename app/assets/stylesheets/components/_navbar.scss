@@ -6,12 +6,28 @@
   padding-right: 1rem;
   padding-left: 1rem;
 
+  #search-navbar{
+    margin-bottom:0%;
+    @media only screen and (max-width: 599px) {
+      display:none;
+    }
+
+    .search-tagg{
+      display:flex;
+    }
+
+    .btn_gold{
+      margin-top:0px;
+      margin-left:3px;
+    }
+  }
+
   #nav-title{
     font-family:Cinzel;
     font-size: 20px;
 
     @media only screen and (min-width: 600px) {
-      margin-left: 70px
+      margin-left: 370px
     }
   }
 }

@@ -2,7 +2,16 @@
 @import "show";
 
 .search-form {
-    margin-bottom:50px;
+  margin-bottom:50px;
+&.index-form{
+  @media only screen and (min-width: 600px) {
+    display:none;
+  }
+}
+
+  .form-control{
+    display:flex;
+  }
   .btn_gold{
     margin-top:2px;
   }

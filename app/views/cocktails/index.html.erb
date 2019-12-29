@@ -1,6 +1,6 @@
 <%= render '/shared/navbar' %>
 <div class="container" style="margin-top: 75px;">
-  <div class="search-form">
+  <div class="search-form index-form">
   <%= form_tag cocktails_path, method: :get do %>
     <%= text_field_tag :query,
       params[:query],
