@@ -17,7 +17,11 @@
       <%= link_to cocktail_path(cocktail) do %>
         <div class="cocktail-card">
           <h3> <%= cocktail.name.upcase%></h3>
+          <% if cocktail.description %>
           <p> <%= cocktail.description %></p>
+          <% else %>
+          <p> <%= cocktail.instructions %></p>
+          <% end %>
           <p id="price"><%= cocktail.category %></p>
         </div>
       <% end %>
