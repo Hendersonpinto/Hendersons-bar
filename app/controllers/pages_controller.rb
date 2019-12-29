@@ -8,4 +8,10 @@ class PagesController < ApplicationController
   def javascript
     @user = User.new
   end
+
+  private
+
+  def strong_params
+    params.require(:user).permit(:email, :name)
+  end
 end

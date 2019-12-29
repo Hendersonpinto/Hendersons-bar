@@ -2,11 +2,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # get "cocktails/home", to: "cocktails#home"
   root to: 'pages#home'
-
-  get "users", to: "users#index"
   get "javascript", to: "pages#javascript", as: :javascript
-  resources :users, only: [:index, :show, :new, :create, :destroy, :update]
-  resources :cocktails, only: [:index, :show, :new, :create, :destroy, :update] do
+  resources :users, only: [:create]
+  resources :cocktails, only: [:index, :show, :create, :destroy, :update] do
     resources :doses, only: [:new, :create]
   end
   resources :doses, only: [:destroy, :update, :edit]

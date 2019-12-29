@@ -5,8 +5,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(strong_params)
-    @user.save
-
   end
 
 
