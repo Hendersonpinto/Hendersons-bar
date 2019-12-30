@@ -3,7 +3,9 @@
     <%= image_tag "logo.jpg", class: "avatar"%>
   <% end %>
 
-    <span id="nav-title">Henderson's Bar</span>
+   <%= link_to root_path, id:"nav-title" do %>
+    <span>Henderson's Bar</span>
+  <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
