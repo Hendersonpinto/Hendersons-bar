@@ -21,8 +21,10 @@ list = open(url).read
 result = JSON.parse(list)
 # p result.class
 # p result.size
+unordered = result["drinks"]
+ordered = unordered.sort_by{|onehash| onehash["strIngredient1"]}
 
-result["drinks"].each do |ingredient|
+ordered.each do |ingredient|
 
   Ingredient.create(name: ingredient["strIngredient1"])
 end
