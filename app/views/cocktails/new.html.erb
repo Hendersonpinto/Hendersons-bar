@@ -1,14 +1,17 @@
 <%= render '/shared/navbar' %>
+<%= render '/shared/small_banner' %>
 <div class="container">
-  <div class="new-form-wrapper">
+  <div class="form-area">
     <%= simple_form_for [@cocktail] do |f| %>
-    <%= f.input :name, label: 'Cocktail name' %>
-    <div class="buttons-form">
-    <%= f.submit "Add a cocktail", class: "btn btn-primary" %>
-    <% end %>
-    <%= link_to "Back to cocktail list", cocktails_path, class: "btn btn-primary"%>
+      <%= f.input :name, label: 'Cocktail name', class:"input-area",
+      placeholder:'My cocktail' %>
+      <%= f.input :category, collection: @categories %>
+      <%= f.input :popular%>
+      <div class="buttons-recipe">
+      <%= f.submit "Create cocktail", class: "btn_gold newcocktail" %>
+    <%= link_to "Back to cocktail list", cocktails_path, class: "btn_gold newcocktail"%>
     </div>
+    <% end %>
   </div>
-
-
 </div>
+

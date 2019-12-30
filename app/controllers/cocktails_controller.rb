@@ -12,6 +12,12 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
+    @categories = []
+    results = Cocktail.select(:category).distinct(:category).to_ary
+    results.each do |cocktail|
+      @categories << cocktail.category
+    end
+    @categories
   end
 
   def create
@@ -61,6 +67,6 @@ class CocktailsController < ApplicationController
   private
 
   def validate_params
-    params.require(:cocktail).permit(:name, :instructions)
+    params.require(:cocktail).permit(:name, :instructions, :popular, :category)
   end
 end
