@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "javascript", to: "pages#javascript", as: :javascript
   resources :users, only: [:create]
-  resources :cocktails, only: [:index, :show, :create, :destroy, :update] do
+  resources :cocktails, only: [:index, :show, :new, :create, :destroy, :update] do
     resources :doses, only: [:new, :create]
   end
   resources :doses, only: [:destroy, :update, :edit]
+  get "cocktails/:id/new_instructions", to:"cocktails#new_instructions", as: :new_instructions
+  patch "cocktails/:id", to:"cocktails#update_instructions"
   get "cocktails/:id/edit", to: "cocktails#editing", as: :editing
   # get "cocktails/:id", to: "cocktails#editing", as: :editing
   # I HAD THIS BEFORE BUT IT DID NOT SHOW ME THE EDITING HTML PAGE

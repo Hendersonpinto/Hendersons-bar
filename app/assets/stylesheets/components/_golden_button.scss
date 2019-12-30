@@ -22,12 +22,12 @@
   border-radius: 4px;
 
   &:hover {
-    color: white;
+    color: $my-gold;
     text-decoration: none;
-    background-color: rgb(196, 141, 98)
-  }
-
-  &:active{
-    background-color: rgb(196, 141, 98)
+    // background-color: rgb(196, 141, 98)
+    background-color:white;
+    border:solid;
+    border-color: $my-gold;
+    border-width:1px;
   }
 }

@@ -1,5 +1,8 @@
 @import "home";
 @import "show";
+@import "new";
+@import "editing";
+@import "edit_add_dose";
 
 .search-form {
   margin-bottom:50px;
@@ -64,4 +67,13 @@
   }
 }
 
-
+#buttondiv{
+  display:flex;
+  margin-bottom:50px;
+  .btn_gold{
+    margin:auto;
+    @media only screen and (max-width: 599px) {
+      width:100%;
+    }
+  }
+}

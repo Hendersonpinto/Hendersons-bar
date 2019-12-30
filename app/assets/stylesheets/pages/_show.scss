@@ -31,6 +31,7 @@ padding-bottom: 30px;
 
 .show-wrapper{
   margin:auto;
+  margin-bottom:70px;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -48,6 +49,7 @@ padding-bottom: 30px;
   }
 
   .internal-wrapper{
+    min-width:100%;
     padding:20px;
     margin-top: 50px;
     // border:solid;
@@ -64,7 +66,7 @@ padding-bottom: 30px;
       p{
       color:$my-lggray;
       font-family:$para-font;
-      font-size:4vw;
+      font-size:6vw;
       }
     }
 
@@ -95,7 +97,13 @@ padding-bottom: 30px;
     display:flex;
     justify-content:space-around;
     width:100%;
-    margin-bottom:150px;
+    // margin-bottom:150px;
+  }
+  .bigbuttonshow{
+    width:80%;
+    #bigbuttonshow{
+      width:100%;
+    }
   }
 }
 

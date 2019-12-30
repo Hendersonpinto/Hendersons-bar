@@ -1,12 +1,12 @@
+<%= render '/shared/navbar' %>
 <div class="container">
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description, label: 'Dose description' %>
-  <%= f.association :ingredient, prompt: "Choose an ingredient" %>
-
-  <%= f.submit "update", class: "btn btn-primary" %>
-
-
-<% end %>
+  <div class="form-area">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description, label: 'Dose quantity' %>
+      <%= f.association :ingredient, prompt: "Choose an ingredient" %>
+      <%= f.submit "Update", class: "btn_gold" %>
+      <%= link_to "Back to recipe", editing_path(@dose.cocktail_id), class: "btn_gold"%>
+    <% end %>
+  </div>
 </div>
 
-<%= link_to "Back to cocktail", cocktail_path(@dose.cocktail_id), class: "btn btn-primary mt-1"%>

@@ -1,8 +1,5 @@
 <%= render '/shared/navbar' %>
-<div class="banner-show">
-  <%= image_tag "logo.jpg", class: "logo-show"%>
-  <h2>A DRINK. BECAUSE NO GREAT STORY EVER BEGAN WITH A SALAD...</h2>
-</div>
+<%= render '/shared/small_banner' %>
 <div class="container" style="margin-top: 100px;">
   <div class="show-wrapper">
     <h2 id="title-index"><%= @cocktail.name.upcase %></h2>
@@ -20,7 +17,11 @@
       </div>
     </div>
     <div class="buttons-area">
-      <%= link_to "Go back to cocktail list", cocktails_path, class: "btn_gold" %>
+      <%= link_to "Edit this recipe", editing_path(@cocktail), class: "btn_gold" %>
+      <%= link_to "Add Instructions", new_instructions_path(@cocktail), class: "btn_gold" %>
+    </div>
+    <div class="bigbuttonshow">
+      <%= link_to "Go back to cocktail list", cocktails_path, class: "btn_gold", id:"bigbuttonshow" %>
     </div>
   </div>
 </div>

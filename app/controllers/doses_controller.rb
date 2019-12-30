@@ -11,7 +11,7 @@ class DosesController < ApplicationController
     @dose = Dose.new(validate_params)
     @dose.cocktail = @cocktail
     if @dose.save
-      redirect_to cocktail_path(@cocktail)
+      redirect_to editing_path(@cocktail)
     else
       render :new
     end
@@ -34,8 +34,11 @@ class DosesController < ApplicationController
     @dose = Dose.find(params[:id])
     # raise
     # @cocktail = Cocktail.find(params[:cocktail_id])
+    # THIS DOES NOT WORK SINCE THE ID FROM PARAMS IS FOR THE DOSE
+    # NOT FOR THE COCKTAIL. USE DOSE.COCKTAIL TO GET COCKTAIL
+    #
     @dose.destroy
-    redirect_to cocktail_path(@dose[:cocktail_id])
+    redirect_to editing_path(@dose.cocktail)
 
   end
 

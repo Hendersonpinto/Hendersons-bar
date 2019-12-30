@@ -1,4 +1,28 @@
 
+  <h2 id="lala">Cocktails list</h2>
+<div class="container">
+<%= simple_form_for [@cocktail] do |f| %>
+  <%= f.input :name, label: 'Cocktail name' %>
+  <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+
+
+<% end %>
+</div>
+<%= link_to "Back to list", cocktails_path, class: "btn btn-primary mt-1"%>
+
+
+
+
+<%= link_to "Show me the cocktail", cocktail_path(@dose.cocktail_id), class: "btn btn-primary mt-1"%>
+
+
+
+
+
+
+
+
+
 
 
   <h2 id="lala">Cocktails list</h2>

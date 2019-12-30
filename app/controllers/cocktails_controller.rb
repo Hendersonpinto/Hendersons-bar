@@ -1,6 +1,5 @@
 class CocktailsController < ApplicationController
   def index
-    @cocktail = Cocktail.new
     if params[:query].present?
       @title = "SEARCH RESULTS"
       @popular = Cocktail.global_search(params[:query])
@@ -9,6 +8,10 @@ class CocktailsController < ApplicationController
       @popular = Cocktail.where(popular:true).order(:name)
     end
     # @popular = Cocktail.all
+  end
+
+  def new
+    @cocktail = Cocktail.new
   end
 
   def create
@@ -46,9 +49,18 @@ class CocktailsController < ApplicationController
   redirect_to cocktails_path
   end
 
+  def new_instructions
+    @cocktail = Cocktail.find(params[:id])
+  end
+
+  def update_instructions
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.update(validate_params[:instructions])
+  end
+
   private
 
   def validate_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :instructions)
   end
 end
