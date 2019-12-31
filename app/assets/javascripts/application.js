@@ -14,4 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-import "form-disappear";
+//= require jquery
+//= require jquery_ujs
+// import "form-disappear";
