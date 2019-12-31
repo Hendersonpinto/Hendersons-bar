@@ -4,22 +4,28 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Josefin+Slab:400,600&display=swap');
-@import url('https://db.onlinewebfonts.com/c/6dd2f2510b4a00a5461b2455928209c2?family=BrandonGrotW01-Light');
 @import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
 @import url('https://db.onlinewebfonts.com/c/116af611cbcd9e4bada60b4e700430c1?family=Avenir+Light');
-@import url('https://db.onlinewebfonts.com/c/9a7e574c3eda05d71d03345d3f9e268e?family=FuturaLTW01-LightOblique');
+// @import url('https://db.onlinewebfonts.com/c/9a7e574c3eda05d71d03345d3f9e268e?family=FuturaLTW01-LightOblique');
 // Define fonts for body and headers
 $body-font: "Open Sans", "Helvetica", "sans-serif";
 $headers-font: "Raleway", "Helvetica", "sans-serif";
 $banner-font: "playfair display";
-$para-font: "BrandonGrotW01-Light";
-$futura: "FuturaLTW01-LightOblique";
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+@font-face {
+  font-family: "BrandonGrotW01-Light";
+  src: font-url('Brandon_Grot_W01_Light.woff') format('woff'),
+}
+$para-font: "BrandonGrotW01-Light";
+@font-face {
+  font-family: "Futura LT";
+  src: font-url('Futura_LT_Light.woff') format('woff'),
+}
+$futura2: "Futura LT";
+
+@font-face {
+  font-family: "FuturaLTW01-LightOblique";
+  src: font-url('Futura_LT_W01_Light_Oblique.woff') format('woff'),
+}
+$futura: "FuturaLTW01-LightOblique";
+
