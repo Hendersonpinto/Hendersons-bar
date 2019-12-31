@@ -32,7 +32,7 @@
       <%= simple_form_for @user do |f| %>
         <%= f.input :name, required: true, label: 'Your full name', placeholder: 'Your Full Name', error: 'Name is mandatory, please specify one' %>
         <%= f.input :email, required: true, placeholder: 'user@domain.com' %>
-        <%= f.button :submit, 'Sign up to newsletter', class: 'btn_gold large', id: "formbutton" %>
       <% end %>
-    </div>
+
+      <p class= "btn_gold large" id="formbutton">Sign up to newsletter</p>
 </div>
