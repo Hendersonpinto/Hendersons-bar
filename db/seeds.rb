@@ -73,7 +73,7 @@ pop_description = ["A classic Island drink of fresh lime and sweet muddled mint,
 "The classic Daiquiri is a super simple rum cocktail that’s well-balanced and refreshing. The combination of sweet, sour and spirit is refreshingly tangy and perfect for any occasion.",
 "It does not matter who invented, what matters is that someone, somewhere summoned the sacred mixture of tequila, lime, orange liqueur and sugar and gifted it to the world.",
 "The greatness of the Manhattan cocktail was recognized while it was still in its hot youth, back in the 1880s, and its acclaim lasted long into the 20th century.",
-"The vodka drink with a kick. Simply vodka and ginger beer with a squeeze of lime served over ice."]
+"The vodka drink with a kick. Simply vodka and ginger beer with a squeeze of lime served over some ice."]
 list = []
 pop_names.each_with_index do |name, index|
   p name
