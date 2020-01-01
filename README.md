@@ -1,24 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+A fully responsive web app which can be used as a cocktail recipe book, where users can see a list of cocktail recipes as well add a new creation of their own or edit a cocktail.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Techstack: Ruby on Rails, JavaScript, Sass, CSS3, HTML and PostgreSQL.
