@@ -35,7 +35,7 @@ end
 puts "Ingredients loaded"
 
 
-puts "Fetching cocktails"
+puts "Fetching cocktails from web"
 alphabet = ("a".."z").to_a
 alphabet.each do |letter|
   url2 = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=#{letter}"
