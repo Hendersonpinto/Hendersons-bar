@@ -45,7 +45,7 @@ alphabet.each do |letter|
     result2["drinks"].each do |cocktail|
       p "THE COCKTAIL NAME IS"
       p cocktail["strDrink"]
-      cock1 = Cocktail.create(name: cocktail["strDrink"], category:cocktail["strCategory"], instructions:cocktail["strInstructions"])
+      cock1 = Cocktail.create(name: cocktail["strDrink"], category:cocktail["strCategory"], instructions:cocktail["strInstructions"], protected:true)
       (1..15).each do |num|
         if cocktail["strIngredient#{num}"]
         # p cocktail["strIngredient#{num}"]

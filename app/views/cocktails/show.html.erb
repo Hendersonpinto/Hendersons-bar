@@ -16,10 +16,17 @@
         <p><%= @cocktail.instructions %></p>
       </div>
     </div>
-    <div class="buttons-area">
-      <%= link_to "Edit this recipe", editing_path(@cocktail), class: "btn_gold" %>
-      <%= link_to "Add Instructions", new_instructions_path(@cocktail), class: "btn_gold" %>
-    </div>
+    <% if @cocktail.protected == true %>
+      <div class="protected-message">
+        <p>This cocktail can't be edited since is protected. Create your own and edit it the way you like!</p>
+      </div>
+    <% else %>
+      <div class="buttons-area">
+        <%= link_to "Edit this recipe", editing_path(@cocktail), class: "btn_gold" %>
+        <%= link_to "Add Instructions", new_instructions_path(@cocktail), class: "btn_gold" %>
+      </div>
+    <% end %>
+
     <div class="bigbuttonshow">
       <%= link_to "Go back to cocktail list", cocktails_path, class: "btn_gold", id:"bigbuttonshow" %>
     </div>
