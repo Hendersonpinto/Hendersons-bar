@@ -68,3 +68,4 @@ gem 'rails-controller-testing', group: [ :test ]
 
 gem 'cloudinary', '~> 1.9.1'
 
+gem 'devise'

@@ -1,5 +1,4 @@
 <%= render '/shared/banner' %>
-<%= render '/shared/navbarhome' %>
 <div class="message-section container">
   <h2> Make you feel at home & get you drunk is my passion...</h2>
   <%= link_to 'Explore my recipes', cocktails_path, class: "btn_gold"%>
@@ -25,17 +24,17 @@
   </div>
 </div>
 
-<div class="backy">
+<%# <div class="backy">
   <div id="disappearing-form">
       <%= image_tag "logo.jpg", class: "logo-form"%>
-      <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
-      <%= simple_form_for @user do |f| %>
-        <%= f.input :name, required: true, label: 'Your full name', placeholder: 'Your Full Name', error: 'Name is mandatory, please specify one' %>
-        <%= f.input :email, required: true, placeholder: 'user@domain.com' %>
-      <% end %>
+      <%# <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p> %>
+      <%# <%= simple_form_for @user do |f| %>
+        <%# <%= f.input :name, required: true, label: 'Your full name', placeholder: 'Your Full Name', error: 'Name is mandatory, please specify one' %>
+        <%# <%= f.input :email, required: true, placeholder: 'user@domain.com' %>
+      <%# <% end %>
 
-      <p class= "btn_gold large" id="formbutton">Sign up to newsletter</p>
-  </div>
-</div>
+      <%# <p class= "btn_gold large" id="formbutton">Sign up to newsletter</p> %>
+  <%# </div> %>
+<%# </div> %>
 
 
