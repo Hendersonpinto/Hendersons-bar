@@ -41,9 +41,13 @@ class CocktailsController < ApplicationController
   def editing
     # raise
     @cocktail = Cocktail.find(params[:id])
-    @doses = Dose.all.where(cocktail_id: @cocktail)
-    # @dose = @doses.first
-    # raise
+    if current_user != @cocktail.owner
+      redirect_to root_path
+    else
+      @doses = Dose.all.where(cocktail_id: @cocktail)
+      # @dose = @doses.first
+      # raise
+    end
   end
 
   def update
