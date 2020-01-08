@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   # get "cocktails/home", to: "cocktails#home"
   root to: 'pages#home'
   get "javascript", to: "pages#javascript", as: :javascript
-  resources :users, only: [:create]
   resources :cocktails, only: [:index, :show, :new, :create, :destroy, :update] do
     resources :doses, only: [:new, :create]
   end
@@ -20,4 +19,11 @@ Rails.application.routes.draw do
   # TO BOTTOM, THE URL IS ROUTED TO THE METHOD IN THE COCKTAILS CONTROLLER
   # SHOW! AND NOT EDITING!. I SOLVED THIS BY ADDING A NEW URL:
   # cocktails/:id/edit. NOW THE METHOD CALLED IS EDITING
+
+  get '/cocktails' => 'cocktails#index', as: :user_root # creates user_root_path
+  namespace :user do
+    root 'cocktails#index' # creates user_root_path
+  end
+  # From line 23 until 26 is the rerouting after loging in and signing up
+
 end
