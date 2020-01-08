@@ -18,23 +18,22 @@
 </div>
 
 
-<div class="subscription-section">
-  <div class="video-area">
-    <%= video_tag "bar2.mp4", autoplay: true, loop: true, id: "myVideo", controls: true, muted: true %>
-  </div>
-</div>
 
-<%# <div class="backy">
+
+<div class="backy">
   <div id="disappearing-form">
       <%= image_tag "logo.jpg", class: "logo-form"%>
-      <%# <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p> %>
-      <%# <%= simple_form_for @user do |f| %>
-        <%# <%= f.input :name, required: true, label: 'Your full name', placeholder: 'Your Full Name', error: 'Name is mandatory, please specify one' %>
-        <%# <%= f.input :email, required: true, placeholder: 'user@domain.com' %>
-      <%# <% end %>
+      <p> Do you want to keep up to date? Register your email and get the best recipes ever! </p>
+     <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+</form>
 
-      <%# <p class= "btn_gold large" id="formbutton">Sign up to newsletter</p> %>
-  <%# </div> %>
-<%# </div> %>
+      <p class= "btn_gold large" id="formbutton">Sign up to newsletter</p>
+  </div>
+</div>
 
 
