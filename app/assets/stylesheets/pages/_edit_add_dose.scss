@@ -4,3 +4,8 @@
     min-height: 200px;
   }
 }
+
+.form-control:focus {
+  border-color: rgb(214, 152, 105);
+  box-shadow: 0 0 0 0.2rem rgba(214, 152, 105, 0.25);
+}

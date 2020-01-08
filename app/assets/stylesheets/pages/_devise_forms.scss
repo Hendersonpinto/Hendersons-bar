@@ -1,0 +1,19 @@
+.form-title{
+    font-family: $para-font;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+a{
+    color:black;
+    font-family: $para-font;
+    &:hover{
+        color:black;
+        // text-decoration: none;
+    }
+}
+
+.simple_form {
+    font-family: $para-font;
+    font-size: 20px;
+}

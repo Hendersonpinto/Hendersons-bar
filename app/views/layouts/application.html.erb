@@ -22,8 +22,7 @@
   <body>
     <div class="main-wrapper">
     <%= render '/shared/navbar' %>
-    <span class="notice"><%= notice %></span>
-    <span class="alert"><%= alert %></span>
+    <%= render '/shared/flashes' %>
     <%= yield %>
     </div>
 
