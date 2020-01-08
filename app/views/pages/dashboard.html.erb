@@ -1,8 +1,18 @@
 <div class="container" style="padding-top: 75px;">
+  <div class="search-form index-form">
+  <%= form_tag cocktails_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search for a cocktail name or an ingredient"
+    %>
+    <%= submit_tag "Search", class: "btn_gold" %>
+  <% end %>
+  </div>
   <h2 id="title-index"><%= @title %></h2>
   <div class="separator2"></div>
   <div class="main-container">
-    <% @popular.each do |cocktail| %>
+    <% @cocktails.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do %>
         <div class="cocktail-card">
           <h3> <%= cocktail.name.upcase%></h3>
@@ -17,7 +27,7 @@
     <% end %>
   </div>
   <div id="buttondiv">
-    <%= link_to "Add your own cocktail!", new_cocktail_path, class: "btn_gold"%>
+    <%= link_to "Add a new cocktail", new_cocktail_path, class: "btn_gold"%>
   </div>
 </div>
 

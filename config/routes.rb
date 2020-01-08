@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # get "cocktails/home", to: "cocktails#home"
   root to: 'pages#home'
   get "javascript", to: "pages#javascript", as: :javascript
+  get "dashboard", to: "pages#dashboard", as: :dashboard
   resources :cocktails, only: [:index, :show, :new, :create, :destroy, :update] do
     resources :doses, only: [:new, :create]
   end
