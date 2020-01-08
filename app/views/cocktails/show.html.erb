@@ -15,9 +15,9 @@
         <p><%= @cocktail.instructions %></p>
       </div>
     </div>
-    <% if @cocktail.protected == true %>
+    <% if @cocktail.owner != current_user %>
       <div class="protected-message">
-        <p>This cocktail can't be edited since is protected. Create your own and edit it the way you like!</p>
+        <p>Create your own cocktail and edit it the way you like!</p>
       </div>
     <% else %>
       <div class="buttons-area">

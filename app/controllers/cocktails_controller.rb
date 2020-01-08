@@ -24,7 +24,8 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(validate_params)
-    if @cocktail.save
+    @cocktail.owner = current_user
+    if @cocktail.save!
       redirect_to cocktail_path(@cocktail)
     else
       render :new
