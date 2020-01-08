@@ -10,9 +10,14 @@ require 'json'
 
 puts 'Clearing database'
 
-User.destroy_all
 Cocktail.destroy_all
+User.destroy_all
+Dose.destroy_all
 Ingredient.destroy_all
+
+puts 'Creating admin user'
+
+admin = User.create!(email:"admin@hb.com", password:"1234567")
 
 puts 'Fetching Ingredients from thecocktaildb.com'
 
@@ -45,8 +50,12 @@ alphabet.each do |letter|
     result2["drinks"].each do |cocktail|
       p "THE COCKTAIL NAME IS"
       p cocktail["strDrink"]
+<<<<<<< HEAD
       # cock1 = Cocktail.create(name: cocktail["strDrink"], category:cocktail["strCategory"], instructions:cocktail["strInstructions"], protected:true)
       cock1 = Cocktail.create(name: cocktail["strDrink"], category:cocktail["strCategory"], instructions:cocktail["strInstructions"])
+=======
+      cock1 = Cocktail.create(name: cocktail["strDrink"], category:cocktail["strCategory"], instructions:cocktail["strInstructions"], owner:admin)
+>>>>>>> devise
       (1..15).each do |num|
         if cocktail["strIngredient#{num}"]
         # p cocktail["strIngredient#{num}"]
@@ -79,6 +88,7 @@ list = []
 pop_names.each_with_index do |name, index|
   p name
   pop1 = Cocktail.find_by(name: name)
+  p pop1
   pop1.popular = true
   pop1.description = pop_description[index]
   pop1.save!
