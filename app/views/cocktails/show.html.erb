@@ -15,9 +15,13 @@
         <p><%= @cocktail.instructions %></p>
       </div>
     </div>
-    <% if @cocktail.owner != current_user %>
-      <div class="protected-message">
-        <p>Create your own cocktail and edit it the way you like!</p>
+    <% if !user_signed_in? %>
+      <div class="bigbuttonshow">
+        <%= link_to "Log in and create/edit your own cocktail the way you like!", new_user_session_path%>
+      </div>
+    <% elsif @cocktail.owner != current_user %>
+      <div class="bigbuttonshow">
+        <%= link_to "Create your own cocktail and edit it the way you like!", new_cocktail_path%>
       </div>
     <% else %>
       <div class="buttons-area">
