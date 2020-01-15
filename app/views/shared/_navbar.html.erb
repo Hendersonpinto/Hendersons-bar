@@ -45,9 +45,15 @@
             data: { confirm: "Are you sure you want to log out?" } %>
         </li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Log in", new_user_session_path, class: "nav-link"%>
-        </li>
+        <% if request.path == "/users/sign_in" %>
+          <li class="nav-item active">
+            <%= link_to "Log in", new_user_session_path, class: "nav-link"%>
+          </li>
+        <% else %>
+          <li class="nav-item ">
+            <%= link_to "Log in", new_user_session_path, class: "nav-link"%>
+          </li>
+        <% end %>
       <% end %>
       <li class="nav-item">
         <div class="search-form" id="search-navbar">
