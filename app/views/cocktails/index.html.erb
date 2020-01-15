@@ -1,4 +1,15 @@
 <div class="container" style="padding-top: 75px;">
+  <div class="search-form index-form">
+    <%= form_tag cocktails_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Search for a cocktail name or an ingredient"
+      %>
+      <%= submit_tag "Search", class: "btn_gold" %>
+    <% end %>
+  </div>
+
   <h2 id="title-index"><%= @title %></h2>
   <div class="separator2"></div>
   <div class="main-container">
