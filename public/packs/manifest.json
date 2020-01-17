@@ -9,6 +9,16 @@
       "js.map": [
         "/packs/js/application-8ef120ff62fceb5cc67d.js.map"
       ]
+    },
+    "myindex": {
+      "js": [
+        "/packs/js/myindex-6f98f3285067263fb4bf.js"
+      ],
+      "js.map": [
+        "/packs/js/myindex-6f98f3285067263fb4bf.js.map"
+      ]
     }
-  }
+  },
+  "myindex.js": "/packs/js/myindex-6f98f3285067263fb4bf.js",
+  "myindex.js.map": "/packs/js/myindex-6f98f3285067263fb4bf.js.map"
 }
