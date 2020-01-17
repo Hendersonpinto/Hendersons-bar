@@ -34,6 +34,10 @@
   }
 
   @media only screen and (max-width: 599px) {
+    .iphonebg{
+      background-attachment: initial;
+    }
+
     h1 {
     word-wrap:break-word;
     color: white;

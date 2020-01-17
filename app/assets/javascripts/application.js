@@ -17,3 +17,4 @@
 //= require jquery
 //= require jquery_ujs
 // import "form-disappear";
+// import "banner";

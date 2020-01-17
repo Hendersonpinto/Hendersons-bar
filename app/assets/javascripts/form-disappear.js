@@ -1,6 +1,6 @@
 console.log("Hello from form-disappear.js!");
-var element = document.querySelector("#disappearing-form");
-var button = document.getElementById("formbutton");
+let element = document.querySelector("#disappearing-form");
+let button = document.getElementById("formbutton");
 
 if (button){
 button.addEventListener("click", (event) =>{
