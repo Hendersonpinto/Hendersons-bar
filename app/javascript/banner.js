@@ -6,7 +6,9 @@ if(isIphone)
 {
     console.log("You are using an iphone");
     let mybanner = document.querySelector(".banner");
+    if (mybanner) {
     console.log(`${mybanner}`);
     mybanner.classList.add('iphonebg');
     console.log("Class was added")
+    }
 }
