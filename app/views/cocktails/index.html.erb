@@ -15,7 +15,7 @@
   <div class="main-container">
     <% @popular.each do |cocktail| %>
       <%= link_to cocktail_path(cocktail) do %>
-        <div class="cocktail-card">
+        <div class="cocktail-card" data-aos="fade-up">
           <h3> <%= cocktail.name.upcase%></h3>
           <% if cocktail.description %>
           <p> <%= cocktail.description %></p>
