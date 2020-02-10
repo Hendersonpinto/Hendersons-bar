@@ -1,54 +1,54 @@
 .banner {
-  display:flex;
-  align-items:center;
-  flex-wrap:wrap;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
-  background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), asset-url('banner.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), asset-url('banner.jpg');
   background-attachment: fixed;
   text-align: center;
 
   @media only screen and (min-width: 600px) {
     h1 {
-    word-wrap:break-word;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    font-size: 8vw;
-    // DESKTOP VERSION
-    // font-size: 13vw;
-    // MOBILE VERSION
-    // font-weight: bold;
-    // font-family: $banner-font;
-    font-family: Cinzel;
+      word-wrap: break-word;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      font-size: 8vw;
+      // DESKTOP VERSION
+      // font-size: 13vw;
+      // MOBILE VERSION
+      // font-weight: bold;
+      // font-family: $banner-font;
+      font-family: Cinzel;
     }
 
     p {
-      font-size: 1.3vw;
+      font-size: 2vw;
       // DESKTOP VERSION
       // font-size: 6vw;
       // MOBILE VERSION
       color: $my-gray;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     }
   }
 
   @media only screen and (max-width: 599px) {
-    &.iphonebg{
+    &.iphonebg {
       background-attachment: initial;
     }
 
     h1 {
-    word-wrap:break-word;
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    // font-size: 8vw;
-    // DESKTOP VERSION
-    font-size: 13vw;
-    // MOBILE VERSION
-    // font-weight: bold;
-    // font-family: $banner-font;
-    font-family: Cinzel;
+      word-wrap: break-word;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+      // font-size: 8vw;
+      // DESKTOP VERSION
+      font-size: 13vw;
+      // MOBILE VERSION
+      // font-weight: bold;
+      // font-family: $banner-font;
+      font-family: Cinzel;
     }
 
     p {
@@ -57,7 +57,7 @@
       font-size: 6vw;
       // MOBILE VERSION
       color: $my-gray;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
     }
   }
 }

@@ -11,10 +11,16 @@
     <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable"  content="yes">
-    <%= javascript_pack_tag "application" %>
-    <%= javascript_include_tag "application" %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= render 'shared/ios_pwa_links' %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_pack_tag "application" %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <!-- Loading AOS. css animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Loading animatedCss -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -24,9 +30,25 @@
   <body>
     <div class="main-wrapper">
     <%= render '/shared/navbarhome' %>
+    <%= render '/shared/flashes' %>
     <%= yield %>
     </div>
 
-<%= javascript_pack_tag 'myindex' %>
+  <%# Loading Green Sock AP %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
+  <%# Loading custom animation %>
+  <%= javascript_pack_tag 'myindex' %>
+  <%# Loading AOS animation library %>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset:100,
+      duration:1500,
+      // mirror:"true",
+      easing: "easy-in-linear",
+      // When the "bottom" of the element hits the "bottom of the scroll"
+      anchorPlacement:"top-bottom"
+    });
+  </script>
   </body>
 </html>
