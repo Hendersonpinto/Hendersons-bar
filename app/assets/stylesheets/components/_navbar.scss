@@ -1,98 +1,95 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background: rgba(255, 255, 255, 1);
-  opacity: 1;
-  padding: 0;
-  padding-right: 1rem;
-  padding-left: 1rem;
+	justify-content: space-between;
+	background: rgba(255, 255, 255, 1);
+	opacity: 1;
+	padding: 0;
+	padding-right: 1rem;
+	padding-left: 1rem;
 
-  &.navbar-home {
-    // REMEMBER TO USE THE & NOTATION FOR COMBINATION OF CLASSES
-    background-color: transparent;
+	.navbar-toggler-icon {
+		// background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)'")
+		background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(214, 152, 105, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+	}
 
-    .navbar-toggler-icon {
-      // background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)'")
-      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(214, 152, 105, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-    }
+	&.navbar-home {
+		// REMEMBER TO USE THE & NOTATION FOR COMBINATION OF CLASSES
+		background-color: transparent;
 
+		.nav-item {
+			&.active {
+				.nav-link {
+					font-weight: bold;
+				}
+			}
 
+			.nav-link {
+				color: white;
+			}
 
-    .nav-item {
-      &.active {
-        .nav-link {
-          font-weight: bold;
-        }
-      }
+			&:hover {
+				.nav-link {
+					color: $my-gold;
+				}
+			}
+		}
 
-      .nav-link {
-        color: white;
-      }
+		&.noBanner {
+			background: rgb(255, 255, 255);
+			opacity: 1;
 
-      &:hover {
-        .nav-link {
-          color: $my-gold;
-        }
-      }
-    }
+			.nav-item {
+				&.active {
+					.nav-link {
+						font-weight: bold;
+					}
+				}
 
-    &.noBanner {
-      background: rgb(255, 255, 255);
-      opacity: 1;
+				.nav-link {
+					color: rgba(0, 0, 0, 0.671);
+				}
 
-      .nav-item {
-        &.active {
-          .nav-link {
-            font-weight: bold;
-          }
-        }
+				&:hover {
+					.nav-link {
+						color: $my-gold;
+					}
+				}
+			}
+		}
+	}
 
-        .nav-link {
-          color: rgba(0, 0, 0, 0.671);
-        }
+	#search-navbar {
+		margin-bottom: 0%;
 
-        &:hover {
-          .nav-link {
-            color: $my-gold;
-          }
-        }
-      }
-    }
-  }
+		@media only screen and (max-width: 599px) {
+			display: none;
+		}
 
+		.search-tagg {
+			display: flex;
+		}
 
-  #search-navbar {
-    margin-bottom: 0%;
+		.btn_gold {
+			margin-top: 0px;
+			margin-left: 3px;
+		}
+	}
 
-    @media only screen and (max-width: 599px) {
-      display: none;
-    }
+	#nav-title {
+		font-family: Cinzel;
+		font-size: 20px;
+		color: black;
 
-    .search-tagg {
-      display: flex;
-    }
-
-    .btn_gold {
-      margin-top: 0px;
-      margin-left: 3px;
-    }
-  }
-
-  #nav-title {
-    font-family: Cinzel;
-    font-size: 20px;
-    color: black;
-
-    @media only screen and (min-width: 600px) {
-      margin-left: 370px
-    }
-  }
+		@media only screen and (min-width: 600px) {
+			margin-left: 370px;
+		}
+	}
 }
 
 .navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+	flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 60px;
-  width: 40px;
+	width: 60px;
+	width: 40px;
 }
