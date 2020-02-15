@@ -1,13 +1,17 @@
 <%= render '/shared/banner' %>
 <div class="message-section container">
+  <div class="slide">
   <h2> Go ahead, create your own cocktail recipe & share it...</h2>
   <%= link_to 'Explore my recipes', cocktails_path, class: "btn_gold"%>
+  </div>
 </div>
 
 <div class="info-wrapper">
   <div class="info-section">
     <div class="half-no-image">
-      <h3>Not sure what to drink for tonight? Don't worry, we got you!</h3>
+      <div class="slide">
+        <h3>Not sure what to drink for tonight? Don't worry, we got you!</h3>
+      </div>
     </div>
 
     <div class="half-with-image">
@@ -36,4 +40,7 @@
   </div>
 </div>
 
+
+  <%= javascript_pack_tag 'navbarscrolling' %>
+  <%= javascript_pack_tag 'slidingElements' %>
 

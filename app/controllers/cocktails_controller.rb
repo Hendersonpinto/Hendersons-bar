@@ -1,19 +1,22 @@
 class CocktailsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_cocktail, only: [:show, :edit, :editing, :update, :destroy, :new_instructions, :update_instructions]
+
 
   def index
+    @popular = policy_scope(Cocktail)
     if params[:query].present?
-      @title = "SEARCH RESULTS"
+      @title = "RESULTS FOR: \"#{params[:query].upcase}\""
       @popular = Cocktail.global_search(params[:query])
     else
       @title = "THE MOST POPULAR"
       @popular = Cocktail.where(popular:true).order(:name)
     end
-    # @popular = Cocktail.all
   end
 
   def new
     @cocktail = Cocktail.new
+    authorize @cocktail
     @categories = []
     results = Cocktail.select(:category).distinct(:category).to_ary
     results.each do |cocktail|
@@ -24,8 +27,9 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(validate_params)
+    authorize @cocktail
     @cocktail.owner = current_user
-    if @cocktail.save!
+    if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
       render :new
@@ -33,14 +37,13 @@ class CocktailsController < ApplicationController
   end
 
   def show
-    @cocktail = Cocktail.find(params[:id])
     @doses = Dose.all.where(cocktail_id: @cocktail)
+    authorize @cocktail
     # raise
   end
 
   def editing
-    # raise
-    @cocktail = Cocktail.find(params[:id])
+    authorize @cocktail
     if current_user != @cocktail.owner
       redirect_to root_path
     else
@@ -51,23 +54,22 @@ class CocktailsController < ApplicationController
   end
 
   def update
-    @cocktail = Cocktail.find(params[:id])
+    authorize @cocktail
     @cocktail.update(validate_params)
     redirect_to cocktail_path(@cocktail)
   end
 
   def destroy
-  @cocktail = Cocktail.find(params[:id])
+  authorize @cocktail
   @cocktail.destroy
-  redirect_to cocktails_path
+  redirect_to dashboard_path
   end
 
   def new_instructions
-    @cocktail = Cocktail.find(params[:id])
+    authorize @cocktail
   end
 
   def update_instructions
-    @cocktail = Cocktail.find(params[:id])
     @cocktail.update(validate_params[:instructions])
   end
 
@@ -75,5 +77,9 @@ class CocktailsController < ApplicationController
 
   def validate_params
     params.require(:cocktail).permit(:name, :instructions, :popular, :category)
+  end
+
+  def set_cocktail
+    @cocktail = Cocktail.find(params[:id])
   end
 end

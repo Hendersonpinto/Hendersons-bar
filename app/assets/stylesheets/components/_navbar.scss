@@ -1,36 +1,83 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgba(255,255,255,1);
+  background: rgba(255, 255, 255, 1);
   opacity: 1;
-  padding:0;
+  padding: 0;
   padding-right: 1rem;
   padding-left: 1rem;
-  &.navbar-home{
+
+  &.navbar-home {
     // REMEMBER TO USE THE & NOTATION FOR COMBINATION OF CLASSES
-  background: rgba(255,255,255,0.5);
-  opacity: 0.9;
+    background-color: transparent;
+
+    .navbar-toggler-icon {
+      color: white;
+    }
+
+    .nav-item {
+      &.active {
+        .nav-link {
+          font-weight: bold;
+        }
+      }
+
+      .nav-link {
+        color: white;
+      }
+
+      &:hover {
+        .nav-link {
+          color: $my-gold;
+        }
+      }
+    }
+
+    &.noBanner {
+      background: rgb(255, 255, 255);
+      opacity: 1;
+
+      .nav-item {
+        &.active {
+          .nav-link {
+            font-weight: bold;
+          }
+        }
+
+        .nav-link {
+          color: rgba(0, 0, 0, 0.671);
+        }
+
+        &:hover {
+          .nav-link {
+            color: $my-gold;
+          }
+        }
+      }
+    }
   }
 
-  #search-navbar{
-    margin-bottom:0%;
+
+  #search-navbar {
+    margin-bottom: 0%;
+
     @media only screen and (max-width: 599px) {
-      display:none;
+      display: none;
     }
 
-    .search-tagg{
-      display:flex;
+    .search-tagg {
+      display: flex;
     }
 
-    .btn_gold{
-      margin-top:0px;
-      margin-left:3px;
+    .btn_gold {
+      margin-top: 0px;
+      margin-left: 3px;
     }
   }
 
-  #nav-title{
-    font-family:Cinzel;
+  #nav-title {
+    font-family: Cinzel;
     font-size: 20px;
-    color:black;
+    color: black;
 
     @media only screen and (min-width: 600px) {
       margin-left: 370px
@@ -46,19 +93,3 @@
   width: 60px;
   width: 40px;
 }
-
-.nav-link {
-  // font-weight: bold;
-  font-family: playfair display;
-  color: red;
-  font-size:16px;
-  font-weight:bold;
-}
-
-// .nav-link-home {
-//   // font-weight: bold;
-//   font-family: playfair display;
-//   // color: red;
-//   font-size:24px;
-//   font-weight:bold;
-// }

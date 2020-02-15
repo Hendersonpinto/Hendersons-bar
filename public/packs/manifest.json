@@ -17,8 +17,28 @@
       "js.map": [
         "/packs/js/myindex-90d5c6db4d1af1ec510d.js.map"
       ]
+    },
+    "navbarscrolling": {
+      "js": [
+        "/packs/js/navbarscrolling-f6f51b3427ced5082920.js"
+      ],
+      "js.map": [
+        "/packs/js/navbarscrolling-f6f51b3427ced5082920.js.map"
+      ]
+    },
+    "slidingElements": {
+      "js": [
+        "/packs/js/slidingElements-347510d0b34b195e82fd.js"
+      ],
+      "js.map": [
+        "/packs/js/slidingElements-347510d0b34b195e82fd.js.map"
+      ]
     }
   },
   "myindex.js": "/packs/js/myindex-90d5c6db4d1af1ec510d.js",
-  "myindex.js.map": "/packs/js/myindex-90d5c6db4d1af1ec510d.js.map"
+  "myindex.js.map": "/packs/js/myindex-90d5c6db4d1af1ec510d.js.map",
+  "navbarscrolling.js": "/packs/js/navbarscrolling-f6f51b3427ced5082920.js",
+  "navbarscrolling.js.map": "/packs/js/navbarscrolling-f6f51b3427ced5082920.js.map",
+  "slidingElements.js": "/packs/js/slidingElements-347510d0b34b195e82fd.js",
+  "slidingElements.js.map": "/packs/js/slidingElements-347510d0b34b195e82fd.js.map"
 }
