@@ -64,7 +64,9 @@ body {
 
     .half-with-image {
       width: 50%;
-      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), asset-url('banner.jpg');
+      // background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), asset-url('showcocktail.jpg');
+      background-image: asset-url('show.gif');
+      background-repeat: repeat;
       background-size: cover;
       background-position: center;
     }
