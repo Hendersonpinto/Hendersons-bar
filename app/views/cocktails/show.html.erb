@@ -19,11 +19,11 @@
       <div class="bigbuttonshow">
         <%= link_to "Log in and create/edit your own cocktail the way you like!", new_user_session_path%>
       </div>
-    <% elsif @cocktail.owner != current_user %>
+    <% elsif !policy(@cocktail).owner_or_admin? %>
       <div class="bigbuttonshow">
         <%= link_to "Create your own cocktail and edit it the way you like!", new_cocktail_path%>
       </div>
-    <% else %>
+    <% elsif policy(@cocktail).editing? %>
       <div class="buttons-area">
         <%= link_to "Edit this recipe", editing_path(@cocktail), class: "btn_gold" %>
         <%= link_to "Add Instructions", new_instructions_path(@cocktail), class: "btn_gold" %>

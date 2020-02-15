@@ -1,21 +1,22 @@
-body{
-  background-color:black !important;
+body {
+  background-color: black !important;
 }
 
-.main-wrapper{
-  background-color:#F4F4F4;
-  padding-bottom:70px;
+.main-wrapper {
+  background-color: #F4F4F4;
+  padding-bottom: 70px;
   min-height: 100vh;
 }
+
 .message-section {
   padding-top: 100px;
   padding-bottom: 100px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 50vh;
   text-align: center;
-  justify-content:center;
+  justify-content: center;
   font-family: $para-font;
 
   h2 {
@@ -31,20 +32,21 @@ body{
   }
 }
 
-.info-wrapper{
+.info-wrapper {
   background-color: $my-gold;
 
-  .info-section{
-    display:flex;
+  .info-section {
+    display: flex;
     min-height: 30vw;
-    .half-no-image{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      width:50%;
-      flex-grow:1;
+
+    .half-no-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      flex-grow: 1;
       background-color: $my-gold;
-      text-align:center;
+      text-align: center;
 
       h3 {
         font-family: playfair display;
@@ -61,8 +63,8 @@ body{
     }
 
     .half-with-image {
-      width:50%;
-      background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)), asset-url('banner.jpg');
+      width: 50%;
+      background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)), asset-url('banner.jpg');
       background-size: cover;
       background-position: center;
     }
@@ -70,12 +72,12 @@ body{
 }
 
 .subscription-section {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   // min-height: 10vh;
   text-align: center;
-  justify-content:center;
+  justify-content: center;
   font-family: $para-font;
 
   h2 {
@@ -85,11 +87,11 @@ body{
     font-size: 4vw;
   }
 
-  p{
+  p {
     font-family: $para-font;
     // font-size:1.5vw;
     // DEKSTOP VERSION
-    font-size:2.5vw;
+    font-size: 2.5vw;
     // MOBILE VERSION
   }
 
@@ -100,72 +102,76 @@ body{
   }
 
   .quote {
-    z-index:1;
+    z-index: 1;
     position: absolute;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    color:white;
-    &.hidden {
-       display:none;
-      }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
 
-    p{
-      margin-bottom:0;
+    &.hidden {
+      display: none;
+    }
+
+    p {
+      margin-bottom: 0;
     }
   }
 }
 
-.backy{
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+.backy {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  justify-content:center;
+  justify-content: center;
 
   h2 {
     font-family: playfair display;
     font-size: 4vw;
   }
 
-  p{
+  p {
     font-family: $para-font;
 
     @media only screen and (max-width: 599px) {
-        font-size:4.5vw;
+      font-size: 4.5vw;
     }
 
     @media only screen and (min-width: 600px) {
-        font-size:1.5vw;
+      font-size: 1.5vw;
     }
   }
 
 
   @media only screen and (min-width: 600px) {
-    #disappearing-form{
-      width:50%;
-      margin-bottom:50px;
+    #disappearing-form {
+      width: 50%;
+      margin-bottom: 50px;
       margin-top: 50px;
       background-color: white;
-      color:black;
+      color: black;
       padding: 5%;
+
       // DESKTOP VERSION
-      .logo-form{
-        width:10vw;
+      .logo-form {
+        width: 10vw;
         margin-bottom: 50px;
       }
+
       &.hidden {
-       display:none;
+        display: none;
       }
 
 
-      .btn_gold.large{
-        width:100%;
+      .btn_gold.large {
+        width: 100%;
+
         // padding-left: 40%;
         // padding-right: 40%;
-        &.disabled{
+        &.disabled {
           pointer-events: none;
         }
       }
@@ -173,30 +179,31 @@ body{
   }
 
   @media only screen and (max-width: 599px) {
-    #disappearing-form{
-      width:90%;
-      margin-top:5vw;
+    #disappearing-form {
+      width: 90%;
+      margin-top: 5vw;
       margin-bottom: 5vw;
       background-color: white;
-      color:black;
+      color: black;
       padding: 5%;
       // MOBILE VERSION
 
       .logo-form {
         width: 20vw;
-        margin-bottom:30px;
+        margin-bottom: 30px;
       }
 
       &.hidden {
-       display:none;
+        display: none;
       }
 
 
-      .btn_gold.large{
-        width:100%;
+      .btn_gold.large {
+        width: 100%;
+
         // padding-left: 40%;
         // padding-right: 40%;
-        &.disabled{
+        &.disabled {
           pointer-events: none;
         }
       }
@@ -207,3 +214,14 @@ body{
 
 
 
+.slide {
+  opacity: 0;
+  transition: all, 0s;
+  transform: translateY(100%) scale(0.95);
+
+  &.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    transition: all, 1s
+  }
+}

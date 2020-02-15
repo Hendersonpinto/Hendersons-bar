@@ -19,6 +19,11 @@ gem 'webpacker'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
+# Authorization gem
+gem 'pundit'
+
+
+
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'autoprefixer-rails'

@@ -1,4 +1,6 @@
 class DosesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+  before_action :set_dose, only: [:edit, :update, :destroy]
 
   def new
     @cocktail = Cocktail.find(params[:cocktail_id])
@@ -6,17 +8,19 @@ class DosesController < ApplicationController
       redirect_to root_path
     else
       @dose = Dose.new
+      authorize @dose
       @ingredients = Ingredient.all.order(:name)
     end
   end
-
+  
   def create
     @cocktail = Cocktail.find(params[:cocktail_id])
     if current_user != @cocktail.owner
       redirect_to root_path
     else
-    @dose = Dose.new(validate_params)
-    @dose.cocktail = @cocktail
+      @dose = Dose.new(validate_params)
+      authorize @dose
+      @dose.cocktail = @cocktail
       if @dose.save!
         redirect_to editing_path(@cocktail)
       else
@@ -24,16 +28,16 @@ class DosesController < ApplicationController
       end
     end
   end
-
+  
   def edit
-    @dose = Dose.find(params[:id])
+    authorize @dose
     if current_user != @dose.cocktail.owner
       redirect_to root_path
     end
   end
-
+  
   def update
-    @dose = Dose.find(params[:id])
+    authorize @dose
     if current_user != @dose.cocktail.owner
       redirect_to root_path
     else
@@ -44,7 +48,7 @@ class DosesController < ApplicationController
 
 
   def destroy
-    @dose = Dose.find(params[:id])
+    authorize @dose
     if current_user != @dose.cocktail.owner
       redirect_to root_path
     else
@@ -64,5 +68,9 @@ class DosesController < ApplicationController
   def validate_params
   # *Strong params*: You need to *whitelist* what can be updated by the user
     params.require(:dose).permit(:description, :ingredient_id)
+  end
+
+  def set_dose
+    @dose = Dose.find(params[:id])
   end
 end
