@@ -4,7 +4,7 @@
     <!-- Required to measure the screen and use media queries -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Henderson's Bar</title>
+    <title><%= if content_for?(:title) then yield(:title) + ' | ' end %>Caracas Bar</title>
     <!-- Including all types of characters -->
     <meta charset="UTF-8">
     <!-- Required for Progressive Web Apps -->
